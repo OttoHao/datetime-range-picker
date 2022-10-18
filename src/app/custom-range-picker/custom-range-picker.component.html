@@ -1,0 +1,24 @@
+<nz-date-picker
+  [nzShowTime]="showTime ? { nzFormat: 'HH:mm' } : false"
+  [nzDisabledDate]="disabledStartDate"
+  nzFormat="mediumDate"
+  [(ngModel)]="startValue"
+  nzPlaceHolder="Start date"
+  (nzOnOpenChange)="handleStartOpenChange($event)"
+  nzShowToday="false"
+  nzShowNow="false"
+  nzAllowClear="false"
+></nz-date-picker>
+<nz-date-picker
+  #endDatePicker
+  [nzShowTime]="showTime ? { nzFormat: 'HH:mm' } : false"
+  [nzDisabledDate]="disabledEndDate"
+  nzFormat="mediumDate"
+  [(ngModel)]="endValue"
+  nzPlaceHolder="End date"
+  (nzOnOpenChange)="handleEndOpenChange($event)"
+  nzRenderExtraFooter="Up to {{ maxDays }} days"
+  nzShowToday="false"
+  nzShowNow="false"
+  nzAllowClear="false"
+></nz-date-picker>

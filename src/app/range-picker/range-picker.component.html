@@ -1,0 +1,12 @@
+<nz-range-picker
+nzFormat="mediumDate"
+[(ngModel)]="date"
+(ngModelChange)="onChange($event)"
+[nzDisabledDate]="disabledDate"
+(nzOnCalendarChange)="onCalendarChange($event)"
+(nzOnPanelChange)="onPanelChange($event)"
+(nzOnOpenChange)="onOpenChange($event)"
+(nzOnOk)="onOk($event)"
+[nzStatus]="status"
+nzRenderExtraFooter="Max 7 days"
+></nz-range-picker>
